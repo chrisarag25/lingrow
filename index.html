@@ -2,242 +2,60 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lingrow | Aprende inglés con estilo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lingrow | Tu academia de inglés online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
       --teal: #2C9AB7;
       --lime: #A4D65E;
-      --dark: #2d2d2d;
-      --light: #ffffff;
-      --gray: #f0f0f0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --dark: #222;
+      --light: #fff;
+      --gray: #f4f4f4;
     }
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #eef7f9);
+      margin: 0;
+      background: var(--light);
       color: var(--dark);
     }
 
     header {
-      background: linear-gradient(to right, var(--teal), #1d7287);
-      color: var(--light);
-      padding: 60px 20px 40px;
-      text-align: center;
-    }
-
-    header img {
-      height: 80px;
-      margin-bottom: 15px;
+      background: var(--teal);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 3rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    nav {
-      background-color: var(--light);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      font-size: 1.8rem;
     }
 
     nav a {
-      margin: 0 20px;
+      margin-left: 20px;
+      color: white;
       text-decoration: none;
-      color: var(--dark);
-      font-weight: 600;
-      font-size: 1rem;
-      transition: color 0.3s ease;
+      font-weight: bold;
     }
 
-    nav a:hover {
-      color: var(--teal);
+    .hero {
+      background: linear-gradient(to right, #2C9AB7, #A4D65E);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
     }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background-color: var(--light);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: var(--teal);
+    .hero h2 {
+      font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .cta button {
-      background-color: var(--lime);
-      color: white;
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.1em;
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .cta button:hover {
-      background-color: #8BC34A;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: var(--light);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    input[type="submit"] {
-      background-color: var(--teal);
-      color: white;
-      border: none;
-      margin-top: 15px;
-      font-size: 1.1em;
-    }
-
-    footer {
-      background-color: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 60px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="https://i.imgur.com/0yKrpC7.png" alt="Lingrow logo" />
-    <h1>Lingrow 💬</h1>
-    <p>Conectando personas a través del idioma 🌍</p>
-  </header>
-
-  <nav>
-    <a href="#niveles">Niveles</a>
-    <a href="#metodologia">Metodología</a>
-    <a href="#registro">Inscripción</a>
-    <a href="#documentos">Documentos</a>
-  </nav>
-
-  <section id="niveles">
-    <h2>Niveles disponibles 📈</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>🔰 A1 - Básico</h3>
-        <p>6 semanas — $20</p>
-      </div>
-      <div class="card">
-        <h3>🔰 A2 - Básico Alto</h3>
-        <p>6 semanas — $20</p>
-      </div>
-      <div class="card">
-        <h3>⚙️ B1 - Intermedio</h3>
-        <p>8 semanas — $30</p>
-      </div>
-      <div class="card">
-        <h3>⚙️ B2 - Intermedio Alto</h3>
-        <p>8 semanas — $30</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="metodologia">
-    <h2>Metodología Lingrow 🧠</h2>
-    <ul>
-      <li>📅 Clases en vivo cada sábado por Zoom</li>
-      <li>🎥 Contenido grabado durante la semana</li>
-      <li>📝 Evaluaciones y examen final</li>
-      <li>📜 Certificación digital por nivel</li>
-    </ul>
-  </section>
-
-  <section class="cta">
-    <h2>¡Inscribite hoy y empezá tu viaje al inglés! ✨</h2>
-    <button onclick="document.getElementById('registro').scrollIntoView();">Registrarme</button>
-  </section>
-
-  <section id="registro">
-    <h2>Formulario de Inscripción 📝</h2>
-    <form action="https://formspree.io/f/xeozqkko" method="POST">
-      <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
-      <input type="email" name="Correo" placeholder="Correo electrónico" required />
-      <input type="text" name="País" placeholder="País de residencia" required />
-      <textarea name="Motivación" placeholder="¿Por qué querés aprender inglés?" rows="4"></textarea>
-      <input type="submit" value="Enviar inscripción" />
-    </form>
-  </section>
-
-  <section id="documentos">
-    <h2>Subí tus documentos personales 📤</h2>
-    <p>Después de inscribirte, subí tu DUI y una foto tipo carnet:</p>
-    <a href="https://forms.gle/TUFORMULARIO" target="_blank" style="display:inline-block; margin-top:10px; background:#2C9AB7; color:white; padding:12px 25px; border-radius:8px; text-decoration:none;">Subir Documentos</a>
-    <h3 style="margin-top:30px;">¿Pagaste? Mandanos tu comprobante por WhatsApp 💬</h3>
-    <a href="https://wa.me/50371234567" target="_blank" style="display:inline-block; margin-top:10px; background:#25D366; color:white; padding:12px 25px; border-radius:8px; text-decoration:none;">Enviar Comprobante</a>
-  </section>
-
-  <footer>
-    🚀 Hecho con ❤️ por el equipo de Lingrow — © 2025 Todos los derechos reservados.
-  </footer>
-</body>
-</html>
+    .hero p {
