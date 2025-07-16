@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lingrow | Aprende inglés con estilo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal: #2C9AB7;
+      --lime: #A4D65E;
+      --dark: #333;
+      --light: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      background-color: var(--teal);
+      padding: 20px;
+      text-align: center;
+      color: var(--light);
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background-color: #f0f0f0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .card h3 {
+      color: var(--teal);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta button {
+      background-color: var(--lime);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta button:hover {
+      background-color: #8BC34A;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    input[type="submit"] {
+      background-color: var(--teal);
+      color: white;
+      border: none;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.imgur.com/0yKrpC7.png" alt="Lingrow logo" />
+  <h1>Lingrow 💬</h1>
+  <p>Conectando personas a través del idioma 🌍</p>
+</header>
+
+<nav>
+  <a href="#niveles">Niveles 🚀</a>
+  <a href="#metodologia">Metodología 📚</a>
+  <a href="#registro">Registro ✍️</a>
+  <a href="#documentos">Documentos 🆔</a>
+</nav>
+
+<section id="niveles">
+  <h2>📈 Niveles disponibles</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🔰 A1 - Básico</h3>
+      <p>Duración: 6 semanas</p>
+      <p>Precio: $20</p>
+    </div>
+    <div class="card">
+      <h3>🔰 A2 - Básico Alto</h3>
+      <p>Duración: 6 semanas</p>
+      <p>Precio: $20</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ B1 - Intermedio</h3>
+      <p>Duración: 8 semanas</p>
+      <p>Precio: $30</p>
+    </div>
+    <div class="card">
+      <h3>⚙️ B2 - Intermedio Alto</h3>
+      <p>Duración: 8 semanas</p>
+      <p>Precio: $30</p>
+    </div>
+  </div>
+</section>
+
+<section id="metodologia">
+  <h2>🧠 ¿Cómo funciona Lingrow?</h2>
+  <ul>
+    <li>🎥 Contenido grabado de lunes a viernes (videos, vocabulario, ejercicios)</li>
+    <li>🧑‍🏫 Clases en vivo por Zoom los sábados (máx. 25 alumnos)</li>
+    <li>📊 Evaluaciones semanales + test final</li>
+    <li>📜 Certificado digital al completar cada nivel</li>
+  </ul>
+</section>
+
+<section class="cta">
+  <h2>¿Listo para aprender inglés con flow? 😎</h2>
+  <p><strong>¡Registrate ahora y comencemos esta aventura juntos! 🚀</strong></p>
+  <button onclick="document.getElementById('registro').scrollIntoView();">Quiero aprender 💪</button>
+</section>
+
+<section id="registro">
+  <h2>📝 Formulario de Registro</h2>
+  <form action="https://formspree.io/f/xeozqkko" method="POST">
+    <input type="text" name="Nombre" placeholder="Tu nombre completo ✍️" required />
+    <input type="email" name="Correo" placeholder="Tu correo electrónico 📧" required />
+    <input type="text" name="País" placeholder="País de residencia 🌎" required />
+    <textarea name="Motivación" placeholder="¿Por qué querés aprender inglés? 🤔" rows="4"></textarea>
+    <input type="submit" value="Enviar solicitud ✈️" />
+  </form>
+</section>
+
+<section id="documentos">
+  <h2>📤 Subí tus Documentos</h2>
+  <p>Después de registrarte, necesitamos validar tu identidad con los siguientes documentos:</p>
+  <ul>
+    <li>📎 Copia de tu DUI</li>
+    <li>🖼️ Fotografía reciente tipo carnet</li>
+  </ul>
+  <p>Usá este formulario para subirlos de forma segura:</p>
+  <a href="https://forms.gle/TUFORMULARIO" target="_blank" style="background:#2C9AB7; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; display:inline-block; margin-bottom:15px;">📤 Subir DUI y Foto</a>
+
+  <h3>📲 Confirmación por WhatsApp</h3>
+  <p>Luego de realizar tu pago, enviá tu comprobante a nuestro WhatsApp para validarte como estudiante.</p>
+  <a href="https://wa.me/50371234567" target="_blank" style="background:#25D366; color:white; padding:12px 25px; text-decoration:none; border-radius:6px; display:inline-block;">Enviar comprobante por WhatsApp</a>
+</section>
+
+<footer>
+  🚀 Hecho con ❤️ por el equipo de Lingrow — © 2025 Todos los derechos reservados.
+</footer>
+
+</body>
+</html>
